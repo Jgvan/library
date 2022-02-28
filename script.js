@@ -105,18 +105,6 @@ function updateTable() {
     });
 }
 
-function addToTable(Book) {
-    let row = document.createElement("tr");
-
-    Object.values(Book).forEach(bookVal => {
-
-        let cell = document.createElement("td");
-        cell.appendChild(document.createTextNode(bookVal));
-        row.appendChild(cell);
-    })
-    libraryBody.appendChild(row);
-}
-
 //Reset all the form values and bring it up on the screen
 function showForm() {
     formDiv.classList.remove("invisible");
@@ -138,3 +126,4 @@ function closeForm() {
 addToLibrary("The Hobbit", "J.R.R. Tolkien", 295, true);
 addToLibrary("Consider Phlebas", "Iain M. Banks", 471, false);
 addToLibrary("Dune", "Frank Herbert", 412, true);
+addToLibrary("American Gods", "Neil Gaiman", 465, true);
