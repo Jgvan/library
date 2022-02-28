@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles.css">
+    <script src="./script.js" defer></script>
+    <title>Library</title>
+</head>
+<body>
+    <table id="library">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Pages</th>
+                <th>Have Read</th>
+            </tr>
+        </thead>
+        <tbody id="lib-body">
+
+        </tbody>
+    </table>
+
+    <div class="add-btn">
+        <button onclick="showForm()">Add Book</button>
+    </div>
+
+    <div id="form" class="invisible">
+        <h2>Add book to Library</h2>
+
+        <p class="text-item">
+            <label for="title">Title: </label>
+            <input type="text" name="title" id="title">
+        </p>
+        <p class="text-item">
+            <label for="author">Author: </label>
+            <input type="text" name="author" id="author">
+        </p>
+        <p class="text-item">
+            <label for="pages">Pages: </label>
+            <input type="number" name="pages" id="pages">
+        </p>
+        <legend>Have you read the book?</legend>
+        <p>
+            <input type="radio" name="status" id="read" value="true">
+            <label for="read">Yes</label>
+        </p>
+        <p>
+            <input type="radio" name="status" id="not-read" value="false">
+            <label for="not-read">No</label>
+        </p>
+        <p class="alert invisible">Please fill out the whole form</p>
+        <button class="add" onclick="btnAddBookClicked()">Add Book</button>
+        <button class="cancel" onclick="closeForm()">Cancel</button>
+    </div>
+</body>
+</html>
